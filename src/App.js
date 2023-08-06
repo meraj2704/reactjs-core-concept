@@ -10,27 +10,28 @@ const singerStyle = {
 function App() {
   return (
     <div className="App">
-      <Person></Person>
-      <Person></Person>
+      <Person name="shakib vai" job="all rounder"></Person>
+      <Person name="tamim vai" job="batsman"></Person>
       <h1>Bujen na ami ai khane achi ar ki</h1>
-      <Friend></Friend>
+      <Friend name="Zayed" talent="good lerner"></Friend>
     </div>
   );
 }
-function Person(){
+function Person(props){
+  console.log(props);
   return (
     <div className='person'>
-      <h1>Shakib Al Hasab</h1>
-      <p>Profesiion : crickter</p>
+      <h1>{props.name}</h1>
+      <p>Role : {props.job}</p>
     </div>
   );
 }
 
-function Friend(){
+function Friend(props){
   return (
     <div className='container'>
-      <h3>Name : zayed</h3>
-    <p>Ostro: gulli</p>
+      <h3>Name : {props.name}</h3>
+    <p>talent: {props.talent}</p>
     </div>
   );
 }
